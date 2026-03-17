@@ -1,0 +1,11 @@
+/index.html
+  Cache-Control: no-cache, must-revalidate
+
+/arm-macbook-buying-guide.html
+  Cache-Control: no-cache, must-revalidate
+
+/mac-apps.html
+  Cache-Control: no-cache, must-revalidate
+
+/img/*
+  Cache-Control: public, max-age=86400
