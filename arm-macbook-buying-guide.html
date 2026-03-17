@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <!--
   Page:        ARM MacBook Buying Guide
-  Version:     26.3.17.4
-  Description: Nav hash links no longer update URL bar. Mac Apps link opens in
-               same tab (removed target="_blank").
+  Version:     26.3.17.5
+  Description: ARM MacBook Buying Guide configs now default-sorted by GPU, CPU,
+               RAM, and Storage descending.
 -->
 <html lang="en">
   <head>
@@ -1174,8 +1174,8 @@
                     <th data-col="1">Size</th>
                     <th data-col="2">Chip</th>
                     <th data-col="3">CPU</th>
-                    <th data-col="4">GPU</th>
-                    <th data-col="5" class="sorted-desc">RAM</th>
+                    <th data-col="4" class="sorted-desc">GPU</th>
+                    <th data-col="5">RAM</th>
                     <th data-col="6">Storage</th>
                     <th data-col="7">Price</th>
                     <th data-col="8">Launch</th>
@@ -1224,7 +1224,7 @@
       </div>
     </div>
 
-    <footer>Version 26.3.17.4 &middot; Made by <a href="https://jordonhgriffin.com" target="_blank" rel="noopener" style="color:inherit;">JHG</a></footer>
+    <footer>Version 26.3.17.5 &middot; Made by <a href="https://jordonhgriffin.com" target="_blank" rel="noopener" style="color:inherit;">JHG</a></footer>
 
     <!-- Scroll to top -->
     <button id="to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">
@@ -1928,9 +1928,9 @@
     }
 
     const DEFAULT_SORT = [
-      {col: 5, dir: -1},  // RAM desc
-      {col: 3, dir: -1},  // CPU desc
       {col: 4, dir: -1},  // GPU desc
+      {col: 3, dir: -1},  // CPU desc
+      {col: 5, dir: -1},  // RAM desc
       {col: 6, dir: -1}   // Storage desc
     ];
 
@@ -2013,7 +2013,7 @@
         document.getElementById("f-price-max").value = "";
         sortSpec = DEFAULT_SORT.map(s => ({...s}));
         document.querySelectorAll("#configs-table th").forEach(t => t.className = "");
-        document.querySelector('#configs-table th[data-col="5"]').className = "sorted-desc";
+        document.querySelector('#configs-table th[data-col="4"]').className = "sorted-desc";
         buildTable();
       });
 
