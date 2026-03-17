@@ -1,0 +1,6 @@
+name = "apple"
+compatibility_date = "2025-03-17"
+
+[assets]
+directory = "./"
+not_found_handling = "404-page"
