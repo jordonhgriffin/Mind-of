@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- 26.3.18.2 · added site preview cards with screenshot images, url, and description; removed civicism/em/bicone from nav into main island -->
+<!-- 26.3.19.1 · added post type labels to site cards; sorted cards alphabetically -->
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -356,6 +356,19 @@
 
       [data-theme="dark"] .site-card-desc { color: #ccc; opacity: 1; }
 
+      .site-card-type {
+        font-size: 0.68em;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        opacity: 0.45;
+        display: block;
+        margin-bottom: 6px;
+        color: var(--text-color);
+      }
+
+      [data-theme="dark"] .site-card-type { color: #fff; }
+
       /* Circular buttons */
       #to-top, #theme-toggle {
         width: 2.5vw;
@@ -507,41 +520,46 @@
                <a class="site-card" href="apple/arm-macbook-buying-guide.html" target="_blank" rel="noopener">
                  <div class="site-card-preview"><img src="img/com-armbuy.png" alt="ARM MacBook Buying Guide preview" loading="lazy" /></div>
                  <div class="site-card-body">
+                   <span class="site-card-type">Guide</span>
                    <span class="site-card-title">ARM MacBook Buying Guide</span>
                    <span class="site-card-url">mind-of.jordonhgriffin.com/apple</span>
                    <p class="site-card-desc">Every ARM MacBook configuration from M1 through M5 — filterable, sortable, with buying philosophy on what actually matters.</p>
                  </div>
                </a>
-               <a class="site-card" href="apple/mac-apps.html" target="_blank" rel="noopener">
-                 <div class="site-card-preview"><img src="img/com-macapps.png" alt="My Mac Apps preview" loading="lazy" /></div>
-                 <div class="site-card-body">
-                   <span class="site-card-title">My Applications & Tools</span>
-                   <span class="site-card-url">mind-of.jordonhgriffin.com/apple</span>
-                   <p class="site-card-desc">Every app I use regularly on MacOS, organized by category with search and filtering.</p>
-                 </div>
-               </a>
                <a class="site-card" href="https://civicism.jordonhgriffin.com" target="_blank" rel="noopener">
                  <div class="site-card-preview"><img src="img/com-civicism.png" alt="Civicism preview" loading="lazy" /></div>
                  <div class="site-card-body">
+                   <span class="site-card-type">Framework</span>
                    <span class="site-card-title">Civicism</span>
                    <span class="site-card-url">civicism.jordonhgriffin.com</span>
                    <p class="site-card-desc">A framework for civic thinking and engagement.</p>
                  </div>
                </a>
+               <a class="site-card" href="https://color-bicone-spectrum.jordonhgriffin.com" target="_blank" rel="noopener">
+                 <div class="site-card-preview"><img src="img/com-color.png" alt="Color Bicone Spectrum preview" loading="lazy" /></div>
+                 <div class="site-card-body">
+                   <span class="site-card-type">Reference</span>
+                   <span class="site-card-title">Color Bicone Spectrum</span>
+                   <span class="site-card-url">color-bicone-spectrum.jordonhgriffin.com</span>
+                   <p class="site-card-desc">A visual exploration of color theory using the bicone color model.</p>
+                 </div>
+               </a>
                <a class="site-card" href="https://electromagnetic-spectrum.jordonhgriffin.com" target="_blank" rel="noopener">
                  <div class="site-card-preview"><img src="img/com-em.png" alt="Electromagnetic Spectrum preview" loading="lazy" /></div>
                  <div class="site-card-body">
+                   <span class="site-card-type">Reference</span>
                    <span class="site-card-title">Electromagnetic Spectrum</span>
                    <span class="site-card-url">electromagnetic-spectrum.jordonhgriffin.com</span>
                    <p class="site-card-desc">A grand visual navigation of the electromagnetic manifold, from cosmic gamma rays to planetary-scale radio waves.</p>
                  </div>
                </a>
-               <a class="site-card" href="https://color-bicone-spectrum.jordonhgriffin.com" target="_blank" rel="noopener">
-                 <div class="site-card-preview"><img src="img/com-color.png" alt="Color Bicone Spectrum preview" loading="lazy" /></div>
+               <a class="site-card" href="apple/mac-apps.html" target="_blank" rel="noopener">
+                 <div class="site-card-preview"><img src="img/com-macapps.png" alt="My Mac Apps preview" loading="lazy" /></div>
                  <div class="site-card-body">
-                   <span class="site-card-title">Color Bicone Spectrum</span>
-                   <span class="site-card-url">color-bicone-spectrum.jordonhgriffin.com</span>
-                   <p class="site-card-desc">A visual exploration of color theory using the bicone color model.</p>
+                   <span class="site-card-type">Reference</span>
+                   <span class="site-card-title">My Applications & Tools</span>
+                   <span class="site-card-url">mind-of.jordonhgriffin.com/apple</span>
+                   <p class="site-card-desc">Every app I use regularly on MacOS, organized by category with search and filtering.</p>
                  </div>
                </a>
              </div>
@@ -550,7 +568,7 @@
       </div>
     </div>
 
-    <footer>Version 26.3.18.2 &middot; Made by <a href="https://jordonhgriffin.com" target="_blank" rel="noopener" style="color:inherit;">JHG</a></footer>
+    <footer>Version 26.3.19.1 &middot; Made by <a href="https://jordonhgriffin.com" target="_blank" rel="noopener" style="color:inherit;">JHG</a></footer>
 
     <!-- Scroll to top -->
     <button id="to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">
